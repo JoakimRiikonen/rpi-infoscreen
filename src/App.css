@@ -1,38 +1,41 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.weather-page {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+}
+
+.weather-icon-display {
+  width: 40%;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.weather-icon-large {
+  width: 150px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.weather-data {
+  width: 60%;
+}
+
+.weather-current {
+  display: flex;
+  font-size: 72px;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather-forecast {
+  width: 40%;
+  margin-left: 25%;
+}
+
+.weather-forecast-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.weather-forecast-image {
+  max-height: 20px;
 }
