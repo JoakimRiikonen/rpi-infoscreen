@@ -6,11 +6,7 @@ export const LargeWeatherIcon = ({ icon }: LargeWeatherIconProps) => {
 
   return (
     <div className="weather-icon-display">
-      <img
-        src={icon}
-        className="weather-icon-large"
-        alt="Large weather icon"
-      />
+        <i className={"bi-" + icon}></i>
     </div>
   )
 }

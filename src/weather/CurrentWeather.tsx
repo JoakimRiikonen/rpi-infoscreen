@@ -18,8 +18,17 @@ export const CurrentWeather = ({ currentWeather }: CurrentWeatherProps) => {
 
   return(
     <div className="weather-current">
-      {convertKelvinToCelsius(currentWeather.main.temp)}°
-      <img src={getWeatherIcon(currentWeather)} alt="Current weather icon"></img>
+      <div className="weather-current-main">
+        <i className={"bi-" + getWeatherIcon(currentWeather) + " weather-current-icon"}></i>
+        <span>{convertKelvinToCelsius(currentWeather.main.temp)}°</span>
+      </div>
+      <div className="weather-current-sub">
+        <div className="weather-current-wind">
+          <i className="bi-wind weather-current-wind-icon" />
+          {currentWeather.wind.speed} m/s
+        </div>
+        <span>Feels like {convertKelvinToCelsius(currentWeather.main.feels_like)}°</span>
+      </div>
     </div>
   )
 }

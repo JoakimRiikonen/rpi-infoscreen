@@ -1,13 +1,20 @@
+body {
+  background-color: #191919;
+  color: #FFF;
+}
+
 .weather-page {
   display: flex;
   justify-content: space-between;
 }
 
 .weather-icon-display {
-  width: 40%;
+  width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 300px;
+  padding-bottom: 5%;
 }
 
 .weather-icon-large {
@@ -15,27 +22,80 @@
 }
 
 .weather-data {
-  width: 60%;
+  width: 50%;
 }
 
 .weather-current {
+  padding: 20px 50px;
+}
+
+.weather-current-main {
   display: flex;
-  font-size: 72px;
-  justify-content: center;
+  font-size: 100px;
+  justify-content: right;
   align-items: center;
+}
+
+.weather-current-sub {
+  display: flex;
+  font-size: 24px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.weather-current-wind {
+  display: flex;
+  font-size: 24px;
+  justify-content: right;
+  align-items: center;
+}
+
+.weather-current-wind-icon {
+  padding-right: 15px;
+}
+
+.weather-current-icon {
+  padding-right: 20px;
+  width: 120px;
 }
 
 .weather-forecast {
-  width: 40%;
-  margin-left: 25%;
+  margin: 10%;
+  font-size: 24px;
+  display: flex;
+}
+
+.weather-forecast-table {
+  width: 100%;
+  border-collapse: collapse;
 }
 
 .weather-forecast-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  border-bottom: 2px solid white;
 }
 
-.weather-forecast-image {
-  max-height: 20px;
+.weather-forecast-row:last-child {
+  border-bottom: none;
+}
+
+.weather-forecast-time {
+  width: 75%;
+}
+
+.weather-forecast-icon {
+  width: 10%;
+}
+
+.line-vertical {
+  height: 90vh;
+  margin: 5vh 0;
+  border: 2px solid white;
+  border-radius: 2px;
+}
+
+.line-right {
+  width: 90%;
+  margin: 5%;
+  border: 2px solid white;
+  border-radius: 2px;
 }

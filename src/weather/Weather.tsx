@@ -42,9 +42,11 @@ const Weather = () => {
 
   return(
     <div className="weather-page">
-      <LargeWeatherIcon icon={getMostImportantWeather(forecast?.list.slice(0,3) ?? [])} />
+      <LargeWeatherIcon icon={getMostImportantWeather(forecast ? forecast?.list.slice(0,3) : [])} />
+      <div className="line-vertical"></div>
       <div className="weather-data">
         <CurrentWeather currentWeather={currentWeather}/>
+        <div className="line-right"></div>
         <Forecast forecast={forecast}/>
       </div>
     </div>

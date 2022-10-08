@@ -17,16 +17,23 @@ export const Forecast = ({ forecast }: ForecastProps) => {
 
   return (
     <div className="weather-forecast">
-      {forecast.list.slice(0, 5).map(f => (
-        <div key={f.dt} className="weather-forecast-row">
-          {getHourInLocalTime(f.dt).toString().padStart(2, '0')}:00 {convertKelvinToCelsius(f.main.temp)}°
-          <img 
-            className="weather-forecast-image"
-            src={getWeatherIcon(f)}
-            alt="Forecast icon"
-            />
-        </div>
-      ))}
+      <table className="weather-forecast-table">
+        <tbody>
+          {forecast.list.slice(0, 5).map(f => (
+            <tr key={f.dt} className="weather-forecast-row">
+              <td className="weather-forecast-time">
+                {getHourInLocalTime(f.dt).toString().padStart(2, '0')}:00
+              </td>
+              <td className="weather-forecast-icon">
+                <i className={"bi-" + getWeatherIcon(f)}></i>
+              </td>
+              <td>
+                {convertKelvinToCelsius(f.main.temp)}°
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   )
 }

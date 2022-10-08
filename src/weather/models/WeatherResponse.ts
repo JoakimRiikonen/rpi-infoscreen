@@ -11,5 +11,10 @@ export interface WeatherResponse {
     id: number,
     main: string,
     description: string
-  }]
+  }],
+  wind: {
+    speed: number,
+    deg: number,
+    gust: number
+  }
 }
