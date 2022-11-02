@@ -1,16 +1,3 @@
-import cloud from './assets/cloud.png';
-import cloud_day from './assets/cloudy_day.png';
-import cloud_night from './assets/cloudy_night.png';
-import moon from './assets/moon.png';
-import rain_heavy from './assets/rain_heavy.png';
-import rain_light from './assets/rain_light.png';
-import rain from './assets/rain.png';
-import sleet from './assets/sleet.png';
-import snow_light from './assets/snow_light.png';
-import snow from './assets/snow.png';
-import storm from './assets/storm.png';
-import sun from './assets/sun.png';
-
 import dayjs from 'dayjs'
 import { WeatherResponse } from './models/WeatherResponse';
 
