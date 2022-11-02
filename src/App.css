@@ -3,7 +3,12 @@ body {
   color: #FFF;
 }
 
+.app {
+  display: flex;
+}
+
 .weather-page {
+  width: 90%;
   display: flex;
   justify-content: space-between;
   margin: 0;
@@ -100,4 +105,21 @@ body {
   margin: 5%;
   border: 2px solid white;
   border-radius: 2px;
+}
+
+.navbar {
+  background-color: white;
+  width: 10%;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar-button {
+  flex-grow: 1;
+  background-color: #191919;
+  color: white;
+  border: 1px solid white;
+  font-size: 48px;
 }
