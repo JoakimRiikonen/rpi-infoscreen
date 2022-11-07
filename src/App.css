@@ -123,3 +123,75 @@ body {
   border: 1px solid white;
   font-size: 48px;
 }
+
+.bus-schedule-list {
+  font-size: 24px;
+  list-style: none;
+  padding: 10px;
+}
+
+.bus-schedule-list-item {
+  width: 100%;
+  border: 3px solid white;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 7px;
+}
+
+.bus-schedule-popup {
+  position: absolute;
+  top: 5vh;
+  left: 12vw;
+  width: 85vw;
+  height: 90vh;
+
+  border: 4px solid white;
+  border-radius: 20px;
+  background-color: #191919;
+}
+
+.bus-schedule-popup-close {
+  color: white;
+  font-size: 48px;
+  margin: 10px;
+  border: none;
+  background-color: #191919;
+  float: right;
+}
+
+.bus-schedule-popup-title {
+  color: white;
+  font-size: 36px;
+  font-weight: normal;
+  margin: 10px 40px;
+}
+
+
+.bus-schedule-table {
+  font-size: 24px;
+  padding: 10px;
+  margin: 10px 40px;
+  border-collapse: collapse;
+}
+
+.bus-schedule-table-row {
+  font-size: 24px;
+  padding: 10px;
+  border-bottom: 2px solid white;
+}
+
+.bus-schedule-table-row:last-child {
+  border-bottom: none;
+}
+
+.bus-schedule-table-time {
+  padding: 5px 20px;
+}
+
+.bus-schedule-table-route-number {
+  padding: 5px 20px;
+}
+
+.bus-schedule-table-route-name {
+  padding: 5px 20px;
+}
