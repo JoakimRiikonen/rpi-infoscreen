@@ -1,3 +1,5 @@
+import dayjs from "dayjs";
+import { useEffect, useState } from "react";
 import { Screen } from "../shared/models/Screen";
 
 export interface NavBarProps {
@@ -5,6 +7,18 @@ export interface NavBarProps {
 }
 
 const NavBar = ({ setScreen }: NavBarProps) => {
+
+  const [time, setTime] = useState("");
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTime(dayjs().format("HH:mm"));
+    }, 1000);
+
+    return () => {
+      clearInterval(timer);
+    };
+  }, [])
 
   return (
     <div className="navbar">
@@ -26,6 +40,9 @@ const NavBar = ({ setScreen }: NavBarProps) => {
       <button className="navbar-button">
         <i className={"bi-cone-striped"}></i>
       </button>
+      <div className="navbar-clock">
+        {time}
+      </div>
     </div>
   )
 }

@@ -124,6 +124,15 @@ body {
   font-size: 48px;
 }
 
+.navbar-clock {
+  flex-grow: 0;
+  background-color: #191919;
+  color: white;
+  border: 1px solid white;
+  font-size: 30px;
+  text-align: center;
+}
+
 .bus-schedule-list {
   font-size: 24px;
   list-style: none;
@@ -134,8 +143,8 @@ body {
   width: 100%;
   border: 3px solid white;
   border-radius: 10px;
-  padding: 10px;
-  margin: 7px;
+  padding: 15px;
+  margin:  25px 7px;
 }
 
 .bus-schedule-popup {
