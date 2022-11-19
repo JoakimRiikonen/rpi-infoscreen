@@ -204,3 +204,34 @@ body {
 .bus-schedule-table-route-name {
   padding: 5px 20px;
 }
+
+.electricity-price-chart {
+  height: 80%;
+  margin: 0 15px;
+}
+
+.electricity-price-date-picker {
+  width: 40%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  font-size: 32px;
+}
+
+.electricity-price-date-picker-date {
+  padding: 10px;
+}
+
+.electricity-price-date-picker-button {
+  font-size: 32px;
+  color: white;
+  background-color: #191919;
+  border: 4px solid white;
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.electricity-price-date-picker-button:disabled {
+  color: #555;
+  border-color: #555;
+}

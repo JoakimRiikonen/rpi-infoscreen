@@ -4,6 +4,7 @@ import './App.css';
 import NavBar from './navbar/NavBar';
 import BusScheduleList from './bus_schedule/BusScheduleList';
 import { Screen } from './shared/models/Screen';
+import ElectricityPrice from './electricity_price/ElectricityPrice';
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
       <NavBar setScreen={(s) => {setCurrentScreen(s)}}/>
       {currentScreen == Screen.Weather && <Weather/>}
       {currentScreen == Screen.Bus && <BusScheduleList/>}
+      {currentScreen == Screen.Electricity && <ElectricityPrice/>}
     </div>
   );
 }

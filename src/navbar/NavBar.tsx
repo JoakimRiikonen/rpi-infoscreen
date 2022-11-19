@@ -34,8 +34,10 @@ const NavBar = ({ setScreen }: NavBarProps) => {
       >
         <i className={"bi-train-front"}></i>
       </button>
-      <button className="navbar-button">
-        <i className={"bi-cone-striped"}></i>
+      <button
+        className="navbar-button"
+        onClick={() => setScreen(Screen.Electricity)}>
+        <i className={"bi-lightning"}></i>
       </button>
       <button className="navbar-button">
         <i className={"bi-cone-striped"}></i>
