@@ -1,5 +1,7 @@
 export interface ScheduleData {
-  [date :string]: ScheduleRow[];
+  default: {
+    [date :string]: ScheduleRow[];
+  }
 }
 
 export interface ScheduleRow {

@@ -20,7 +20,7 @@ const BusSchedulePopup = ({ stopCode, stopName, closePopup }: BusSchedulePopup) 
       const currentDate = dayjs().format('YYYYMMDD');
       const data: ScheduleData = await import(`./data/${stopCode}.json`);
 
-      const currentDayData = data[currentDate];
+      const currentDayData = data.default[currentDate];
 
       const currentTime = dayjs().format('HH:mm:ss');
       const i = currentDayData.findIndex(s => s.departure_time > currentTime);
