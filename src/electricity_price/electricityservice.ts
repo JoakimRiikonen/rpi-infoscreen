@@ -3,7 +3,7 @@ import { SpotPriceOnDate, SpotPricesByDate } from './models/SpotPricesByDate';
 import dayjs from 'dayjs';
 
 export const getSpotPrices = async () => {
-  const url = `${process.env.REACT_APP_SERVER_URL}/spotprices`
+  const url = `${import.meta.env.VITE_SERVER_URL}/spotprices`
   const res = await fetch(url);
   const data: SpotPriceResponseRow[] = await res.json();
 
@@ -22,7 +22,7 @@ const mapPricesByDate = (data: SpotPriceResponseRow[]): SpotPricesByDate => {
       hour: day.hour(),
       priceNoTax: row.PriceNoTax,
       priceWithTax: row.PriceWithTax,
-      priceWithMargin: row.PriceWithTax + Number(process.env.REACT_APP_SPOT_MARGIN)
+      priceWithMargin: row.PriceWithTax + Number(import.meta.env.VITE_SPOT_MARGIN)
     }
 
     pricesByDate[date].push(p);
