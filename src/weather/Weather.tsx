@@ -5,7 +5,7 @@ import { LargeWeatherIcon } from "./LargeWeatherIcon";
 import { ForecastResponse } from "./models/ForecastResponse";
 import { WeatherResponse } from "./models/WeatherResponse";
 import { getCurrent, getForecast } from "./weatherservice";
-import { getMostImportantWeather } from "./weatherHelpers";
+import { getHoursUntilMostImporantWeather, getMostImportantWeather } from "./weatherHelpers";
 
 const Weather = () => {
 
@@ -42,7 +42,10 @@ const Weather = () => {
 
   return(
     <div className="weather-page">
-      <LargeWeatherIcon icon={getMostImportantWeather(forecast ? forecast?.list.slice(0,3) : [])} />
+      <LargeWeatherIcon
+        weatherType={getMostImportantWeather(forecast ? forecast?.list.slice(0,3) : [])}
+        hoursUntil={currentWeather && forecast ? getHoursUntilMostImporantWeather(currentWeather, forecast.list.slice(0,3)) : 0}
+      />
       <div className="line-vertical"></div>
       <div className="weather-data">
         <CurrentWeather currentWeather={currentWeather}/>
