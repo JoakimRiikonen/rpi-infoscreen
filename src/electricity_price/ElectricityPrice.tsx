@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react"
 import { getSpotPrices } from "./electricityservice";
 import { SpotPricesByDate } from "./models/SpotPricesByDate";
-import { VictoryAxis, VictoryBar, VictoryChart } from 'victory';
 import dayjs from 'dayjs';
 import ElectricityPriceChart from "./ElectricityPriceChart";
+import { ElectricityPriceStats } from "./ElectricityPriceStats";
 import DatePicker from "./DatePicker";
 
 const ElectricityPrice = () => {
@@ -32,6 +32,9 @@ const ElectricityPrice = () => {
 
   return (
     <div>
+      <ElectricityPriceStats
+        spotPricesOnDate={spotPrices[selectedDate]}
+      />
       <ElectricityPriceChart 
         spotPricesOnDate={spotPrices[selectedDate]}
       />

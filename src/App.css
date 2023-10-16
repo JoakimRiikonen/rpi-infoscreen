@@ -219,12 +219,12 @@ body {
 }
 
 .electricity-price-chart {
-  height: 80%;
+  height: 75%;
   margin: 0 15px;
 }
 
 .electricity-price-date-picker {
-  width: 40%;
+  width: 45%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -247,4 +247,15 @@ body {
 .electricity-price-date-picker-button:disabled {
   color: #555;
   border-color: #555;
+}
+
+.electricity-price-stats {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+.electricity-price-stat {
+  font-size: 32px;
+  padding: 5px 20px;
 }

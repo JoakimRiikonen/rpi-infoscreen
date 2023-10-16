@@ -1,6 +1,6 @@
 import dayjs from 'dayjs'
 import { SpotPriceOnDate  } from './models/SpotPricesByDate';
-import { VictoryAxis, VictoryBar, VictoryChart } from 'victory';
+import { VictoryAxis, VictoryBar, VictoryChart, VictoryLabel } from 'victory';
 
 interface ElectricityPriceChartProps {
   spotPricesOnDate: SpotPriceOnDate[];
@@ -11,10 +11,16 @@ const ElectricityPriceChart = ({ spotPricesOnDate } : ElectricityPriceChartProps
   return (
     <div className='electricity-price-chart'>
       <VictoryChart
-        domain={{ y: [0, 0.8] }}
+        domain={{ y: [-0.1, 0.8] }}
         domainPadding={10}
         width={700}
-        height={380}
+        height={360}
+        style={{
+          parent: {
+            padding: '0px',
+            margin: '-40px 0',
+          }
+        }}
       >
         <VictoryAxis
           tickValues={[0, 3, 6, 9, 12, 15, 18, 21]}
@@ -53,8 +59,19 @@ const ElectricityPriceChart = ({ spotPricesOnDate } : ElectricityPriceChartProps
           style={{
             data: {
               fill: '#FFF'
+            },
+            labels: {
+              fill: '#999'
             }
           }}
+          labels={({datum}) => datum?.priceWithMargin?.toFixed(2)}
+          labelComponent={
+            <VictoryLabel 
+              angle={45}
+              dx={-15}
+              dy={0}
+            />
+          }
         />
       </VictoryChart>
     </div>
