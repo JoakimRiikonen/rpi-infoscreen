@@ -1,6 +1,6 @@
 var fs = require('fs');
 
-const STOPS = [11, 106, 1903]
+const STOPS = [11, 106, 1914]
 
 const stopUrl = `http://data.foli.fi/gtfs/v0/stop_times/stop/`;
 const tripUrl = `http://data.foli.fi/gtfs/v0/trips/all`;

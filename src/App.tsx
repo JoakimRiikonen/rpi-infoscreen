@@ -5,6 +5,7 @@ import NavBar from './navbar/NavBar';
 import BusScheduleList from './bus_schedule/BusScheduleList';
 import { Screen } from './shared/models/Screen';
 import ElectricityPrice from './electricity_price/ElectricityPrice';
+import Sensors from './sensors/Sensors';
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
       {currentScreen == Screen.Weather && <Weather/>}
       {currentScreen == Screen.Bus && <BusScheduleList/>}
       {currentScreen == Screen.Electricity && <ElectricityPrice/>}
+      {currentScreen == Screen.Sensors && <Sensors/>}
     </div>
   );
 }

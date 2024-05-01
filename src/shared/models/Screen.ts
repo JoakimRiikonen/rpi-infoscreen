@@ -1,5 +1,6 @@
 export enum Screen {
   Weather = 'WEATHER',
   Bus = 'BUS',
-  Electricity = 'ELECTRICITY'
+  Electricity = 'ELECTRICITY',
+  Sensors = 'SENSORS',
 }
