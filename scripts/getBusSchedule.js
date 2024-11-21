@@ -43,7 +43,7 @@ const main = async () => {
     });
 
     const resultJson = JSON.stringify(result);
-    fs.writeFile(`src/bus_schedule/data/${stop}.json`, resultJson, 'utf8', (err) => {
+    fs.writeFile(`app/bus/data/${stop}.json`, resultJson, 'utf8', (err) => {
       if (err) { 
         console.log(err);
         return;

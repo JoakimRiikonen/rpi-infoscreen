@@ -1,0 +1,305 @@
+body {
+  background-color: #191919;
+  color: #FFF;
+  user-select: none;
+
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.app {
+  display: flex;
+}
+
+.weather-page {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.weather-icon-display {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 300px;
+  padding-bottom: 5%;
+}
+
+.weather-icon-info-text {
+  font-size: 24px;
+}
+
+.weather-icon-large {
+  width: 150px;
+}
+
+.weather-data {
+  width: 50%;
+}
+
+.weather-current {
+  padding: 5px 50px;
+}
+
+.weather-current-main {
+  display: flex;
+  font-size: 100px;
+  justify-content: right;
+  align-items: center;
+}
+
+.weather-current-sub {
+  display: flex;
+  font-size: 24px;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+}
+
+.weather-current-wind {
+  display: flex;
+  font-size: 24px;
+  justify-content: right;
+  align-items: center;
+}
+
+.weather-current-wind-icon {
+  padding-right: 15px;
+}
+
+.weather-current-icon {
+  padding-right: 20px;
+  width: 120px;
+}
+
+.weather-forecast {
+  margin: 10%;
+  font-size: 24px;
+  display: flex;
+  height: 40vh;
+  overflow-y: scroll;
+}
+
+.weather-forecast-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.weather-forecast-row {
+  border-bottom: 2px solid white;
+}
+
+.weather-forecast-row:last-child {
+  border-bottom: none;
+}
+
+.weather-forecast-time {
+  width: 75%;
+}
+
+.weather-forecast-icon {
+  width: 10%;
+}
+
+.weather-forecast-wind {
+  padding-right: 15px;
+}
+
+.line-vertical {
+  height: 90vh;
+  margin: 4vh 0;
+  border: 2px solid white;
+  border-radius: 2px;
+}
+
+.line-right {
+  width: 90%;
+  margin: 5%;
+  border: 2px solid white;
+  border-radius: 2px;
+}
+
+.navbar {
+  background-color: white;
+  width: 10%;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar-link {
+  flex-grow: 1;
+  background-color: #191919;
+  color: white;
+  border: 1px solid white;
+  font-size: 48px;
+  align-content: center;
+  text-align: center;
+}
+
+.navbar-clock {
+  flex-grow: 0;
+  background-color: #191919;
+  color: white;
+  border: 1px solid white;
+  font-size: 30px;
+  text-align: center;
+}
+
+.bus-schedule-list {
+  font-size: 24px;
+  list-style: none;
+  padding: 10px;
+}
+
+.bus-schedule-list-item {
+  width: 100%;
+  border: 3px solid white;
+  border-radius: 10px;
+  padding: 15px;
+  margin:  25px 7px;
+}
+
+.bus-schedule-popup {
+  position: absolute;
+  top: 5vh;
+  left: 12vw;
+  width: 85vw;
+  height: 90vh;
+
+  border: 4px solid white;
+  border-radius: 20px;
+  background-color: #191919;
+}
+
+.bus-schedule-popup-close {
+  color: white;
+  font-size: 48px;
+  margin: 10px;
+  border: none;
+  background-color: #191919;
+  float: right;
+}
+
+.bus-schedule-popup-title {
+  color: white;
+  font-size: 36px;
+  font-weight: normal;
+  margin: 10px 40px;
+}
+
+
+.bus-schedule-table {
+  font-size: 24px;
+  padding: 10px;
+  margin: 10px 40px;
+  border-collapse: collapse;
+}
+
+.bus-schedule-table-row {
+  font-size: 24px;
+  padding: 10px;
+  border-bottom: 2px solid white;
+}
+
+.bus-schedule-table-row:last-child {
+  border-bottom: none;
+}
+
+.bus-schedule-table-time {
+  padding: 5px 20px;
+}
+
+.bus-schedule-table-route-number {
+  padding: 5px 20px;
+}
+
+.bus-schedule-table-route-name {
+  padding: 5px 20px;
+}
+
+.electricity-price-chart {
+  height: 75%;
+  margin: 0 15px;
+}
+
+.electricity-price-date-picker {
+  width: 45%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  font-size: 32px;
+}
+
+.electricity-price-date-picker-date {
+  padding: 10px;
+}
+
+.electricity-price-date-picker-button {
+  font-size: 32px;
+  color: white;
+  background-color: #191919;
+  border: 4px solid white;
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.electricity-price-date-picker-button:disabled {
+  color: #555;
+  border-color: #555;
+}
+
+.electricity-price-stats {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+.electricity-price-stat {
+  font-size: 32px;
+  padding: 5px 20px;
+}
+
+.sensors {
+  padding: 10px;
+}
+
+.sensor {
+  padding: 10px 12px;
+  border: 4px solid white;
+  border-radius: 10px;
+}
+
+.sensor-id {
+  text-align: center;
+  text-decoration: underline;
+  margin-top: 0;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.sensor-stats {
+  display: flex;
+}
+
+.metric-card {
+  margin: 0 5px;
+  padding: 8px 10px;
+  border: 3px solid white;
+  border-radius: 10px;
+  font-size: 24px;
+
+  .metric-card-text {
+    padding-left: 5px;
+  }
+}

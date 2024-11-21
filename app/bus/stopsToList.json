@@ -1,0 +1,16 @@
+{
+  "stops": [
+    {
+      "code": 11,
+      "name": "Borenpuisto"
+    },
+    {
+      "code": 106,
+      "name": "Linnankatu"
+    },
+    {
+      "code": 1914,
+      "name": "Kauppatori B4"
+    }
+  ]
+}
