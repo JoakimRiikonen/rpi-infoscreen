@@ -6,9 +6,9 @@ import { SpotPricesByDate } from "./models/SpotPricesByDate";
 import dayjs from 'dayjs';
 import ElectricityPriceChart from "./ElectricityPriceChart";
 import { ElectricityPriceStats } from "./ElectricityPriceStats";
-import DatePicker from "./DatePicker";
+import DatePicker from "../_components/DatePicker";
 
-export default function Weather() {
+export default function ElectricityPrice() {
   const [spotPrices, setSpotPrices] = useState<SpotPricesByDate>({});
   const [selectedDate, setSelectedDate] = useState(dayjs().format('YYYY-MM-DD'));
 

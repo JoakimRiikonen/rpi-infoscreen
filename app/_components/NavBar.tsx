@@ -39,7 +39,7 @@ const NavBar = () => {
         <i className={"bi-lightning"}></i>
       </Link>
       <Link
-        href='#'
+        href='/plants'
         className="navbar-link"
       >
         <i className={"bi-droplet-half"}></i>
