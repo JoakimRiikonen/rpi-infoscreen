@@ -23,7 +23,7 @@ const mapPricesByDate = (data: SpotPriceResponseRow[]): SpotPricesByDate => {
       pricesByDate[date] = [];
     }
     const p: SpotPriceOnDate = {
-      hour: day.hour(),
+      dateTime: row.DateTime,
       priceNoTax: row.PriceNoTax,
       priceWithTax: row.PriceWithTax,
       priceWithMargin: row.PriceWithTax + Number(process.env.SPOT_MARGIN)

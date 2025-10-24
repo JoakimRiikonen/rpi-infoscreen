@@ -1,6 +1,4 @@
-import { SpotPriceResponseRow } from './models/SpotPriceResponse';
-import { SpotPriceOnDate, SpotPricesByDate } from './models/SpotPricesByDate';
-import dayjs from 'dayjs';
+import { SpotPricesByDate } from './models/SpotPricesByDate';
 
 export const getSpotPrices = async () => {
   const url = '/api/electricity/spotprices'

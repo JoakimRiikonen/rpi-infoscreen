@@ -21,7 +21,7 @@ const ElectricityPriceChart = ({ spotPricesOnDate } : ElectricityPriceChartProps
         }}
       >
         <VictoryAxis
-          tickValues={[0, 3, 6, 9, 12, 15, 18, 21]}
+          tickValues={[0, 3*4, 2*3*4, 3*3*4, 4*3*4, 5*3*4, 6*3*4, 7*3*4]}
           tickFormat={['00:00', '03:00', '06:00', '09:00', '12:00', '15:00', '18:00', '21:00']}
           style={{
             axis: {
@@ -62,7 +62,6 @@ const ElectricityPriceChart = ({ spotPricesOnDate } : ElectricityPriceChartProps
               fill: '#999'
             }
           }}
-          labels={({datum}) => datum?.priceWithMargin?.toFixed(2)}
           labelComponent={
             <VictoryLabel 
               angle={45}

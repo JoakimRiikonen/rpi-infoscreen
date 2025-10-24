@@ -3,7 +3,7 @@ export interface SpotPricesByDate {
 }
 
 export interface SpotPriceOnDate {
-  hour: number;
+  dateTime: string;
   priceNoTax: number;
   priceWithTax: number;
   priceWithMargin: number;
