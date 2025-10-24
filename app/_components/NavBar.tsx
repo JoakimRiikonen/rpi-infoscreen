@@ -39,10 +39,10 @@ const NavBar = () => {
         <i className={"bi-lightning"}></i>
       </Link>
       <Link
-        href='/plants'
+        href='/eye'
         className="navbar-link"
       >
-        <i className={"bi-droplet-half"}></i>
+        <i className={"bi-eye"}></i>
       </Link>
       <div className="navbar-clock">
         {time}

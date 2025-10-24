@@ -303,3 +303,35 @@ body {
     padding-left: 5px;
   }
 }
+
+.eye-page {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 200px;
+}
+
+.eye {
+  width: 200px;
+  height: 200px;
+  background: white;
+  border-radius: 100% 0;
+  transform: scale(1) rotate(45deg) ;
+  transition: all .05s linear;
+}
+
+.eye.blink {
+  transform: scaleY(0) rotate(45deg) ;
+}
+
+.pupil {
+  position: relative;
+  top: -200px;
+  left: 0;
+  width: 120px;
+  height: 120px;
+  background: #191919;
+  border-radius: 100% 100%;
+  transform: translate(40px, 40px);
+}
